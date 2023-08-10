@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>
+            lenguaje de señas(mexicano)
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+         <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    </head>
+    <body>
+        <center>
+            <h1>
+                Adicinador de emjios con las manos
+            </h1>
+            <br>
+            <br>
+            <p>toma una selfie de una seña para identificarla(no mas puede identificar los de estas imagenes no vallas a buscar algo en gugul)</p>
+            <img src="1.jpg">
+            <img src="2.jpg" height="100px">
+            <img src="3.jpg" height="100px">
+            <br>
+            <br>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>
+                    vista de la camara
+                </label>
+                <div id="camara"></div>
+                <br>
+                <br>
+                <button class="btn btn-primary" onclick="fotos()">
+                    capturar imagen
+                </button>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>
+                    Prediccion
+                </label>
+                <p class="nombre-seña" id="resultado_nombre_seña"></p>
+                <p class="proba" id="resultado_proba"></p>
+                <div id="resultado"></div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>
+                    seña capturada
+                </label>
+                <div id="captura"></div>
+                <br>
+                <br>
+                <button class="btn btn-primary" onclick="identificar()">
+                    detectar imagen
+                </button>
+            </div>
+        </center>
+        <script src="main.js"></script>
+    </body>
+</html>
